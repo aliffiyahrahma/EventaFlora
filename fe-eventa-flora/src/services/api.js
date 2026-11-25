@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000/api/game';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api/game';
 
 export async function createPlayer(name) {
   const res = await fetch(`${API_BASE}/players`, {
